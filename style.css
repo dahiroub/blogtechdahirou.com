@@ -142,6 +142,7 @@ article h2 a {
 article p {
     color: #555;
 }
+
 /* --- About page --- */
 .about-page {
     max-width: 900px;
@@ -343,8 +344,6 @@ article p {
     text-decoration: underline;
 }
 
-
-
 /* FOOTER */
 footer {
     text-align: center;
@@ -362,4 +361,43 @@ footer a {
 
 footer a:hover {
     color: #fff;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    nav .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .menu li a {
+        display: block;
+        width: 90%;
+        margin: auto;
+        font-size: 1rem;
+    }
+
+    /* Sous-menu en mode mobile */
+    nav .submenu {
+        position: static;
+        box-shadow: none;
+        background: #f9f9f9;
+        border-radius: 6px;
+        margin-top: 5px;
+    }
+
+    nav .submenu li a {
+        padding: 12px;
+    }
 }
